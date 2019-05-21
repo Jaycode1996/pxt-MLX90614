@@ -22,5 +22,5 @@ MIT
 * for PXT/microbit
 (The metadata above is needed for package search.)
 ```package
-MLX90614=github:DoraLC/pxt-MLX90614
+MLX90614=github:BLstem/pxt-MLX90614
 ```
