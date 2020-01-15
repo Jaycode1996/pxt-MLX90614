@@ -13,7 +13,7 @@ namespace MLX90614 {
 
     function read16(reg: NumberFormat.UInt8BE): number {
         pins.i2cWriteNumber(addr, reg, NumberFormat.UInt8BE, true);
-        let ret = pins.i2cReadNumber(addr, NumberFormat.UInt16LE, true);
+        let ret = pins.i2cReadNumber(addr, NumberFormat.UInt8LE, true);                //change
         //ret |= pins.i2cReadNumber(addr, NumberFormat.UInt16LE) << 8
         return ret
     }
@@ -22,7 +22,6 @@ namespace MLX90614 {
         let temp = read16(reg)
         temp *= .02
         temp -= 273.15
-        temp=Number(temp).toFixed(2)
         return temp
     }
 
