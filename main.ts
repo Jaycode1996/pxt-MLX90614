@@ -22,7 +22,7 @@ namespace MLX90614 {
         let temp = read16(reg)
         temp *= .02
         temp -= 273.15
-        Math.floor(temp*10)/10                                         //change
+        (temp).toPrecision(4)                                        //change
         return temp
     }
 
