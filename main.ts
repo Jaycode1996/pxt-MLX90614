@@ -20,9 +20,8 @@ namespace MLX90614 {
 
     function readTemp(reg: NumberFormat.UInt8BE): number {
         let temp = read16(reg)
-        temp *= .02
+        temp *= .01
         temp -= 273.15
-        (temp).toPrecision(4)                                        //change
         return temp
     }
 
