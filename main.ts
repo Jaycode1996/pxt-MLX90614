@@ -21,7 +21,7 @@ namespace MLX90614 {
     function readTemp(reg: NumberFormat.UInt8BE): number {
         let temp = read16(reg)
         temp *= .01
-        temp -= 273.15
+        temp -= 273.82
         return temp
     }
 
